@@ -237,7 +237,7 @@ class JobFlowApp {
             if (query) params.set('q', query);
             if (location) params.set('loc', location);
             
-            this.navigateTo(`/jobs.html?${params.toString()}`);
+            this.navigateTo(`./jobs.html?${params.toString()}`);
         }
     }
 
@@ -348,7 +348,7 @@ class JobFlowApp {
         
         // Redirect to jobs page
         setTimeout(() => {
-            this.navigateTo('/jobs.html');
+            this.navigateTo('./jobs.html');
         }, 1500);
     }
 

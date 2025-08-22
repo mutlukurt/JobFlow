@@ -23,11 +23,11 @@ class JobFlowJobs {
     async loadData() {
         try {
             // Load jobs data
-            const jobsResponse = await fetch('/data/jobs.json');
+            const jobsResponse = await fetch('./data/jobs.json');
             this.jobs = await jobsResponse.json();
             
             // Load companies data
-            const companiesResponse = await fetch('/data/companies.json');
+            const companiesResponse = await fetch('./data/companies.json');
             this.companies = await companiesResponse.json();
             
             // Merge company data with jobs
@@ -717,7 +717,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.jobFlowJobs = new JobFlowJobs();
     
     // Load data from URL if on jobs page
-    if (window.location.pathname === '/jobs.html') {
+            if (window.location.pathname.includes('jobs.html')) {
         window.jobFlowJobs.loadFromURL();
     }
     
