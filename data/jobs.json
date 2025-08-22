@@ -1,0 +1,345 @@
+[
+  {
+    "id": "job-001",
+    "title": "Senior Frontend Developer",
+    "companyId": "company-001",
+    "role": "frontend",
+    "type": "Full Time",
+    "experience": "senior",
+    "location": "San Francisco, CA",
+    "remote": "hybrid",
+    "salaryMin": 120000,
+    "salaryMax": 180000,
+    "description": "We're looking for a Senior Frontend Developer to join our growing team. You'll be responsible for building and maintaining our web applications, working with modern technologies like React, TypeScript, and Next.js. You'll collaborate with designers, product managers, and backend developers to create exceptional user experiences.",
+    "responsibilities": [
+      "Develop and maintain high-quality web applications",
+      "Collaborate with cross-functional teams to define features",
+      "Write clean, maintainable, and well-tested code",
+      "Mentor junior developers and conduct code reviews",
+      "Stay up-to-date with emerging technologies and best practices"
+    ],
+    "requirements": [
+      "5+ years of experience in frontend development",
+      "Strong proficiency in JavaScript, TypeScript, and React",
+      "Experience with modern build tools and testing frameworks",
+      "Understanding of web performance and accessibility",
+      "Excellent communication and collaboration skills"
+    ],
+    "benefits": [
+      "Competitive salary and equity package",
+      "Comprehensive health, dental, and vision insurance",
+      "Flexible work arrangements and remote options",
+      "Professional development and conference budget",
+      "401(k) matching and generous PTO"
+    ],
+    "niceToHave": [
+      "Experience with Next.js and server-side rendering",
+      "Knowledge of design systems and component libraries",
+      "Familiarity with backend technologies and APIs",
+      "Open source contributions and community involvement"
+    ],
+    "featured": true,
+    "urgent": false,
+    "posted": "2024-03-15T10:00:00Z"
+  },
+  {
+    "id": "job-002",
+    "title": "Backend Engineer",
+    "companyId": "company-002",
+    "role": "backend",
+    "type": "Full Time",
+    "experience": "mid",
+    "location": "New York, NY",
+    "remote": "remote",
+    "salaryMin": 100000,
+    "salaryMax": 140000,
+    "description": "Join our backend team to build scalable, high-performance systems that power our platform. You'll work with cutting-edge technologies and help architect solutions that can handle millions of users.",
+    "responsibilities": [
+      "Design and implement backend services and APIs",
+      "Optimize database queries and system performance",
+      "Write clean, maintainable code with comprehensive tests",
+      "Collaborate with frontend and DevOps teams",
+      "Participate in system design and architecture decisions"
+    ],
+    "requirements": [
+      "3+ years of backend development experience",
+      "Proficiency in Python, Go, or Node.js",
+      "Experience with relational and NoSQL databases",
+      "Knowledge of microservices and distributed systems",
+      "Understanding of cloud platforms (AWS, GCP, or Azure)"
+    ],
+    "benefits": [
+      "Competitive salary and benefits package",
+      "Remote-first work environment",
+      "Health, dental, and vision insurance",
+      "Flexible PTO and work hours",
+      "Professional development opportunities"
+    ],
+    "niceToHave": [
+      "Experience with Kubernetes and Docker",
+      "Knowledge of message queues and event streaming",
+      "Familiarity with monitoring and observability tools",
+      "Contributions to open source projects"
+    ],
+    "featured": false,
+    "urgent": true,
+    "posted": "2024-03-14T14:30:00Z"
+  },
+  {
+    "id": "job-003",
+    "title": "Full Stack Developer",
+    "companyId": "company-003",
+    "role": "fullstack",
+    "type": "Full Time",
+    "experience": "mid",
+    "location": "Austin, TX",
+    "remote": "hybrid",
+    "salaryMin": 90000,
+    "salaryMax": 130000,
+    "description": "We're seeking a Full Stack Developer to join our dynamic team. You'll work on both frontend and backend development, helping to build and maintain our web applications and APIs.",
+    "responsibilities": [
+      "Develop full-stack web applications",
+      "Build and maintain RESTful APIs",
+      "Create responsive and accessible user interfaces",
+      "Collaborate with designers and product managers",
+      "Write clean, maintainable code with tests"
+    ],
+    "requirements": [
+      "3+ years of full-stack development experience",
+      "Proficiency in JavaScript/TypeScript and React",
+      "Experience with Node.js and Express",
+      "Knowledge of SQL databases and ORMs",
+      "Understanding of web fundamentals and best practices"
+    ],
+    "benefits": [
+      "Competitive salary and equity",
+      "Health, dental, and vision insurance",
+      "Flexible work arrangements",
+      "Professional development budget",
+      "401(k) matching"
+    ],
+    "niceToHave": [
+      "Experience with Next.js or similar frameworks",
+      "Knowledge of GraphQL and API design",
+      "Familiarity with cloud platforms",
+      "Understanding of DevOps practices"
+    ],
+    "featured": false,
+    "urgent": false,
+    "posted": "2024-03-13T09:15:00Z"
+  },
+  {
+    "id": "job-004",
+    "title": "DevOps Engineer",
+    "companyId": "company-004",
+    "role": "devops",
+    "type": "Full Time",
+    "experience": "senior",
+    "location": "Seattle, WA",
+    "remote": "onsite",
+    "salaryMin": 130000,
+    "salaryMax": 180000,
+    "description": "Join our DevOps team to build and maintain our infrastructure and deployment pipelines. You'll work with cutting-edge technologies to ensure our systems are reliable, scalable, and secure.",
+    "responsibilities": [
+      "Design and implement CI/CD pipelines",
+      "Manage cloud infrastructure and services",
+      "Monitor system performance and reliability",
+      "Implement security best practices",
+      "Automate deployment and configuration processes"
+    ],
+    "requirements": [
+      "5+ years of DevOps or infrastructure experience",
+      "Strong knowledge of AWS, Azure, or GCP",
+      "Experience with Kubernetes and Docker",
+      "Proficiency in scripting languages (Python, Bash)",
+      "Understanding of networking and security principles"
+    ],
+    "benefits": [
+      "Competitive salary and benefits",
+      "Comprehensive health insurance",
+      "Flexible work arrangements",
+      "Professional development opportunities",
+      "401(k) matching and generous PTO"
+    ],
+    "niceToHave": [
+      "Experience with Terraform and infrastructure as code",
+      "Knowledge of monitoring and observability tools",
+      "Familiarity with microservices architecture",
+      "Understanding of compliance and security frameworks"
+    ],
+    "featured": true,
+    "urgent": false,
+    "posted": "2024-03-12T16:45:00Z"
+  },
+  {
+    "id": "job-005",
+    "title": "UI/UX Designer",
+    "companyId": "company-005",
+    "role": "designer",
+    "type": "Full Time",
+    "experience": "mid",
+    "location": "Remote",
+    "remote": "remote",
+    "salaryMin": 80000,
+    "salaryMax": 120000,
+    "description": "We're looking for a talented UI/UX Designer to create beautiful and intuitive user experiences. You'll work closely with our product and engineering teams to design solutions that delight our users.",
+    "responsibilities": [
+      "Create user-centered design solutions",
+      "Design user interfaces and user experiences",
+      "Conduct user research and usability testing",
+      "Create wireframes, prototypes, and design systems",
+      "Collaborate with cross-functional teams"
+    ],
+    "requirements": [
+      "3+ years of UI/UX design experience",
+      "Proficiency in design tools (Figma, Sketch, Adobe)",
+      "Understanding of user-centered design principles",
+      "Experience with design systems and component libraries",
+      "Strong portfolio showcasing your work"
+    ],
+    "benefits": [
+      "Competitive salary and benefits",
+      "Remote work environment",
+      "Health, dental, and vision insurance",
+      "Flexible PTO and work hours",
+      "Professional development opportunities"
+    ],
+    "niceToHave": [
+      "Experience with prototyping tools",
+      "Knowledge of frontend development",
+      "Understanding of accessibility standards",
+      "Experience with user research methods"
+    ],
+    "featured": false,
+    "urgent": false,
+    "posted": "2024-03-11T11:20:00Z"
+  },
+  {
+    "id": "job-006",
+    "title": "Product Manager",
+    "companyId": "company-001",
+    "role": "manager",
+    "type": "Full Time",
+    "experience": "senior",
+    "location": "San Francisco, CA",
+    "remote": "hybrid",
+    "salaryMin": 140000,
+    "salaryMax": 200000,
+    "description": "Join our product team to drive the vision and strategy for our products. You'll work with stakeholders across the organization to define product roadmaps and ensure successful delivery.",
+    "responsibilities": [
+      "Define product vision and strategy",
+      "Create and maintain product roadmaps",
+      "Gather and prioritize product requirements",
+      "Work with engineering and design teams",
+      "Analyze market trends and competitive landscape"
+    ],
+    "requirements": [
+      "5+ years of product management experience",
+      "Strong analytical and strategic thinking skills",
+      "Experience with agile development methodologies",
+      "Excellent communication and leadership abilities",
+      "Understanding of technology and user experience"
+    ],
+    "benefits": [
+      "Competitive salary and equity package",
+      "Comprehensive health insurance",
+      "Flexible work arrangements",
+      "Professional development budget",
+      "401(k) matching and generous PTO"
+    ],
+    "niceToHave": [
+      "Experience in SaaS or B2B products",
+      "Knowledge of data analysis and metrics",
+      "Familiarity with user research methods",
+      "Understanding of business strategy and operations"
+    ],
+    "featured": true,
+    "urgent": false,
+    "posted": "2024-03-10T13:00:00Z"
+  },
+  {
+    "id": "job-007",
+    "title": "Frontend Developer (Entry Level)",
+    "companyId": "company-006",
+    "role": "frontend",
+    "type": "Full Time",
+    "experience": "entry",
+    "location": "Chicago, IL",
+    "remote": "onsite",
+    "salaryMin": 60000,
+    "salaryMax": 80000,
+    "description": "Start your career as a Frontend Developer with our growing team. You'll learn modern web development technologies and work on real projects that impact our users.",
+    "responsibilities": [
+      "Develop user interfaces using HTML, CSS, and JavaScript",
+      "Learn and work with modern frameworks like React",
+      "Collaborate with senior developers on projects",
+      "Write clean, maintainable code",
+      "Participate in code reviews and team meetings"
+    ],
+    "requirements": [
+      "Bachelor's degree in Computer Science or related field",
+      "Basic knowledge of HTML, CSS, and JavaScript",
+      "Understanding of web development fundamentals",
+      "Strong problem-solving and learning abilities",
+      "Excellent communication and teamwork skills"
+    ],
+    "benefits": [
+      "Competitive entry-level salary",
+      "Comprehensive health insurance",
+      "Professional development and training",
+      "Mentorship from senior developers",
+      "401(k) matching and PTO"
+    ],
+    "niceToHave": [
+      "Experience with React or similar frameworks",
+      "Knowledge of version control (Git)",
+      "Understanding of responsive design",
+      "Familiarity with web accessibility"
+    ],
+    "featured": false,
+    "urgent": false,
+    "posted": "2024-03-09T15:30:00Z"
+  },
+  {
+    "id": "job-008",
+    "title": "Backend Developer (Contract)",
+    "companyId": "company-007",
+    "role": "backend",
+    "type": "Contract",
+    "experience": "senior",
+    "location": "Remote",
+    "remote": "remote",
+    "salaryMin": 80,
+    "salaryMax": 120,
+    "description": "We're looking for a senior backend developer to help us build and scale our APIs. This is a 6-month contract position with the possibility of extension.",
+    "responsibilities": [
+      "Design and implement backend services",
+      "Optimize database performance and queries",
+      "Write clean, maintainable code with tests",
+      "Collaborate with frontend and DevOps teams",
+      "Document APIs and technical specifications"
+    ],
+    "requirements": [
+      "5+ years of backend development experience",
+      "Proficiency in Python, Java, or Node.js",
+      "Experience with microservices architecture",
+      "Knowledge of cloud platforms and databases",
+      "Strong problem-solving and communication skills"
+    ],
+    "benefits": [
+      "Competitive hourly rate",
+      "Remote work flexibility",
+      "Professional development opportunities",
+      "Potential for full-time conversion"
+    ],
+    "niceToHave": [
+      "Experience with Kubernetes and Docker",
+      "Knowledge of GraphQL and API design",
+      "Familiarity with monitoring and logging tools",
+      "Understanding of security best practices"
+    ],
+    "featured": false,
+    "urgent": true,
+    "posted": "2024-03-08T10:15:00Z"
+  }
+]

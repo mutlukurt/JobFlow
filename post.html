@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job - JobFlow</title>
+    <meta name="description" content="Post your job opening and reach thousands of qualified candidates. Simple, effective job posting for employers.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="/" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="var(--primary)"/>
+                        <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                    </svg>
+                    <span>JobFlow</span>
+                </a>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="/jobs.html" class="nav__link">Jobs</a></li>
+                    <li><a href="/about.html" class="nav__link">About</a></li>
+                    <li><a href="/post.html" class="nav__link active">Post a Job</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-toggle__icon theme-toggle__icon--light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                
+                <div class="auth-buttons">
+                    <button class="btn btn--outline" data-modal="signin">Sign In</button>
+                    <button class="btn btn--primary" data-modal="signup">Create Account</button>
+                </div>
+                
+                <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Post a Job</h1>
+                <p class="page-subtitle">Reach thousands of qualified candidates and find the perfect fit for your team</p>
+            </div>
+        </section>
+
+        <!-- Job Posting Form -->
+        <section class="job-posting">
+            <div class="container">
+                <div class="job-posting__content">
+                    <div class="job-posting__main">
+                        <form class="job-form" id="job-form">
+                            <!-- Basic Information -->
+                            <div class="form-section">
+                                <h2>Basic Information</h2>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="job-title">Job Title *</label>
+                                        <input type="text" id="job-title" required placeholder="e.g., Senior Frontend Developer">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="job-department">Department</label>
+                                        <input type="text" id="job-department" placeholder="e.g., Engineering, Design, Marketing">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="job-type">Employment Type *</label>
+                                        <select id="job-type" required>
+                                            <option value="">Select employment type</option>
+                                            <option value="fulltime">Full Time</option>
+                                            <option value="parttime">Part Time</option>
+                                            <option value="contract">Contract</option>
+                                            <option value="internship">Internship</option>
+                                            <option value="freelance">Freelance</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="job-experience">Experience Level *</label>
+                                        <select id="job-experience" required>
+                                            <option value="">Select experience level</option>
+                                            <option value="entry">Entry Level</option>
+                                            <option value="mid">Mid Level</option>
+                                            <option value="senior">Senior Level</option>
+                                            <option value="lead">Lead</option>
+                                            <option value="executive">Executive</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="job-location">Location *</label>
+                                        <input type="text" id="job-location" required placeholder="e.g., San Francisco, CA or Remote">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="job-remote">Remote Policy</label>
+                                        <select id="job-remote">
+                                            <option value="">Select remote policy</option>
+                                            <option value="onsite">On-site only</option>
+                                            <option value="hybrid">Hybrid</option>
+                                            <option value="remote">Remote only</option>
+                                            <option value="flexible">Flexible</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Compensation -->
+                            <div class="form-section">
+                                <h2>Compensation & Benefits</h2>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="job-salary-min">Minimum Salary</label>
+                                        <input type="number" id="job-salary-min" min="0" placeholder="e.g., 80000">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="job-salary-max">Maximum Salary</label>
+                                        <input type="number" id="job-salary-max" min="0" placeholder="e.g., 120000">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="job-salary-period">Salary Period</label>
+                                    <select id="job-salary-period">
+                                        <option value="yearly">Yearly</option>
+                                        <option value="monthly">Monthly</option>
+                                        <option value="hourly">Hourly</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="job-benefits">Benefits</label>
+                                    <textarea id="job-benefits" rows="3" placeholder="List the benefits your company offers (health insurance, 401k, flexible hours, etc.)"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Job Details -->
+                            <div class="form-section">
+                                <h2>Job Details</h2>
+                                
+                                <div class="form-group">
+                                    <label for="job-description">Job Description *</label>
+                                    <textarea id="job-description" rows="6" required placeholder="Provide a comprehensive overview of the role, including what the candidate will be doing day-to-day..."></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="job-responsibilities">Key Responsibilities *</label>
+                                    <textarea id="job-responsibilities" rows="4" required placeholder="List the main responsibilities and duties for this position..."></textarea>
+                                    <small>Enter each responsibility on a new line</small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="job-requirements">Requirements *</label>
+                                    <textarea id="job-requirements" rows="4" required placeholder="List the skills, experience, and qualifications required for this position..."></textarea>
+                                    <small>Enter each requirement on a new line</small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="job-nice-to-have">Nice to Have</label>
+                                    <textarea id="job-nice-to-have" rows="3" placeholder="List any additional skills or experience that would be beneficial but not required..."></textarea>
+                                    <small>Enter each item on a new line</small>
+                                </div>
+                            </div>
+
+                            <!-- Company Information -->
+                            <div class="form-section">
+                                <h2>Company Information</h2>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="company-name">Company Name *</label>
+                                        <input type="text" id="company-name" required placeholder="Your company name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="company-website">Company Website</label>
+                                        <input type="url" id="company-website" placeholder="https://yourcompany.com">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="company-description">Company Description</label>
+                                    <textarea id="company-description" rows="3" placeholder="Brief description of your company, mission, and culture..."></textarea>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="company-size">Company Size</label>
+                                        <select id="company-size">
+                                            <option value="">Select company size</option>
+                                            <option value="1-10">1-10 employees</option>
+                                            <option value="11-50">11-50 employees</option>
+                                            <option value="51-200">51-200 employees</option>
+                                            <option value="201-500">201-500 employees</option>
+                                            <option value="500+">500+ employees</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="company-industry">Industry</label>
+                                        <input type="text" id="company-industry" placeholder="e.g., Technology, Healthcare, Finance">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Information -->
+                            <div class="form-section">
+                                <h2>Contact Information</h2>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contact-name">Contact Name *</label>
+                                        <input type="text" id="contact-name" required placeholder="Your full name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-title">Job Title</label>
+                                        <input type="text" id="contact-title" placeholder="e.g., HR Manager, Hiring Manager">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contact-email">Contact Email *</label>
+                                        <input type="email" id="contact-email" required placeholder="your.email@company.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-phone">Contact Phone</label>
+                                        <input type="tel" id="contact-phone" placeholder="+1 (555) 123-4567">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Additional Options -->
+                            <div class="form-section">
+                                <h2>Additional Options</h2>
+                                
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="featured-job">
+                                        <span class="checkmark"></span>
+                                        Feature this job (appears at the top of search results)
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="urgent-hiring">
+                                        <span class="checkmark"></span>
+                                        Mark as urgent hiring
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="application-deadline">Application Deadline</label>
+                                    <input type="date" id="application-deadline">
+                                    <small>Leave blank if no specific deadline</small>
+                                </div>
+                            </div>
+
+                            <!-- Form Actions -->
+                            <div class="form-actions">
+                                <button type="button" class="btn btn--outline" id="save-draft">Save as Draft</button>
+                                <button type="submit" class="btn btn--primary btn--large">Post Job</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="job-posting__sidebar">
+                        <div class="posting-tips">
+                            <h3>Tips for a Great Job Post</h3>
+                            <ul>
+                                <li><strong>Be specific</strong> about requirements and responsibilities</li>
+                                <li><strong>Highlight benefits</strong> that make your company attractive</li>
+                                <li><strong>Use clear language</strong> and avoid jargon</li>
+                                <li><strong>Include salary ranges</strong> to attract the right candidates</li>
+                                <li><strong>Describe your company culture</strong> and values</li>
+                            </ul>
+                        </div>
+
+                        <div class="posting-stats">
+                            <h3>Why Choose JobFlow?</h3>
+                            <div class="stat-item">
+                                <span class="stat-number">50K+</span>
+                                <span class="stat-label">Active Job Seekers</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">Fill Rate</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24hrs</span>
+                                <span class="stat-label">Average Response Time</span>
+                            </div>
+                        </div>
+
+                        <div class="posting-help">
+                            <h3>Need Help?</h3>
+                            <p>Our team is here to help you create the perfect job posting.</p>
+                            <a href="/about.html" class="btn btn--outline btn--full">Contact Support</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="var(--primary)"/>
+                            <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                        </svg>
+                        <span>JobFlow</span>
+                    </div>
+                    <p>Connecting talent with opportunity</p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3>For Job Seekers</h3>
+                        <ul>
+                            <li><a href="/jobs.html">Browse Jobs</a></li>
+                            <li><a href="/about.html">Career Advice</a></li>
+                            <li><a href="#" data-modal="signup">Create Profile</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h3>For Employers</h3>
+                        <ul>
+                            <li><a href="/post.html">Post a Job</a></li>
+                            <li><a href="/about.html">Pricing</a></li>
+                            <li><a href="/about.html">Recruitment Tools</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="/about.html">About Us</a></li>
+                            <li><a href="/about.html">Blog</a></li>
+                            <li><a href="/about.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 JobFlow. All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="/about.html">Privacy Policy</a>
+                    <a href="/about.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="signin-modal" data-modal="signin">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h2>Sign In</h2>
+                <button class="modal__close" aria-label="Close modal">&times;</button>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="signin-email">Email</label>
+                    <input type="email" id="signin-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signin-password">Password</label>
+                    <input type="password" id="signin-password" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Sign In</button>
+            </form>
+            <p class="auth-form__footer">
+                Don't have an account? <a href="#" data-modal="signup">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="signup-modal" data-modal="signup">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h2>Create Account</h2>
+                <button class="modal__close" aria-label="Close modal">&times;</button>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Create Account</button>
+            </form>
+            <p class="auth-form__footer">
+                Already have an account? <a href="#" data-modal="signin">Sign in</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/jobs.js"></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Detail - JobFlow</title>
+    <meta name="description" content="View detailed job information, company details, and apply for this position.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="/" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="var(--primary)"/>
+                        <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                    </svg>
+                    <span>JobFlow</span>
+                </a>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="/jobs.html" class="nav__link">Jobs</a></li>
+                    <li><a href="/about.html" class="nav__link">About</a></li>
+                    <li><a href="/post.html" class="nav__link">Post a Job</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-toggle__icon theme-toggle__icon--light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                
+                <div class="auth-buttons">
+                    <button class="btn btn--outline" data-modal="signin">Sign In</button>
+                    <button class="btn btn--primary" data-modal="signup">Create Account</button>
+                </div>
+                
+                <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/jobs.html">Jobs</a></li>
+                    <li aria-current="page">Job Detail</li>
+                </ol>
+            </nav>
+
+            <!-- Job Header -->
+            <div class="job-header">
+                <div class="job-header__content">
+                    <div class="job-header__main">
+                        <div class="company-badge">
+                            <div class="company-badge__logo">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <rect width="48" height="48" rx="12" fill="var(--surface-2)"/>
+                                    <text x="24" y="28" text-anchor="middle" fill="var(--text-2)" font-family="Inter" font-size="16" font-weight="600">TC</text>
+                                </svg>
+                            </div>
+                            <div class="company-badge__info">
+                                <h1 class="job-title" id="job-title">Loading...</h1>
+                                <div class="company-name" id="company-name">Loading...</div>
+                            </div>
+                        </div>
+                        
+                        <div class="job-meta">
+                            <div class="job-meta__item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                <span id="job-location">Loading...</span>
+                            </div>
+                            <div class="job-meta__item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect width="20" height="20" x="2" y="7" rx="2" ry="2"/>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2v16"/>
+                                </svg>
+                                <span id="job-type">Loading...</span>
+                            </div>
+                            <div class="job-meta__item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                </svg>
+                                <span id="job-salary">Loading...</span>
+                            </div>
+                            <div class="job-meta__item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span id="job-posted">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="job-header__actions">
+                        <button class="btn btn--outline" id="save-job" aria-label="Save job">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                            Save Job
+                        </button>
+                        <button class="btn btn--primary btn--large" id="apply-now" data-modal="apply">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job Content -->
+            <div class="job-content">
+                <div class="job-content__main">
+                    <!-- Job Description -->
+                    <section class="job-section">
+                        <h2>Job Description</h2>
+                        <div id="job-description">
+                            <p>Loading job description...</p>
+                        </div>
+                    </section>
+
+                    <!-- Responsibilities -->
+                    <section class="job-section">
+                        <h2>Responsibilities</h2>
+                        <ul id="job-responsibilities">
+                            <li>Loading responsibilities...</li>
+                        </ul>
+                    </section>
+
+                    <!-- Requirements -->
+                    <section class="job-section">
+                        <h2>Requirements</h2>
+                        <ul id="job-requirements">
+                            <li>Loading requirements...</li>
+                        </ul>
+                    </section>
+
+                    <!-- Benefits -->
+                    <section class="job-section">
+                        <h2>Benefits</h2>
+                        <ul id="job-benefits">
+                            <li>Loading benefits...</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="job-sidebar">
+                    <!-- Company Info -->
+                    <div class="company-card">
+                        <h3>About the Company</h3>
+                        <div class="company-card__content">
+                            <div class="company-card__logo">
+                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                    <rect width="64" height="64" rx="16" fill="var(--surface-2)"/>
+                                    <text x="32" y="38" text-anchor="middle" fill="var(--text-2)" font-family="Inter" font-size="20" font-weight="600">TC</text>
+                                </svg>
+                            </div>
+                            <div class="company-card__info">
+                                <h4 id="sidebar-company-name">Loading...</h4>
+                                <p id="sidebar-company-desc">Loading company description...</p>
+                                <div class="company-card__meta">
+                                    <span id="sidebar-company-size">Loading...</span>
+                                    <span id="sidebar-company-industry">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn--outline btn--full">View Company</a>
+                    </div>
+
+                    <!-- Similar Jobs -->
+                    <div class="similar-jobs">
+                        <h3>Similar Jobs</h3>
+                        <div id="similar-jobs-list">
+                            <!-- Similar jobs will be loaded here -->
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="var(--primary)"/>
+                            <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                        </svg>
+                        <span>JobFlow</span>
+                    </div>
+                    <p>Connecting talent with opportunity</p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3>For Job Seekers</h3>
+                        <ul>
+                            <li><a href="/jobs.html">Browse Jobs</a></li>
+                            <li><a href="/about.html">Career Advice</a></li>
+                            <li><a href="#" data-modal="signup">Create Profile</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h3>For Employers</h3>
+                        <ul>
+                            <li><a href="/post.html">Post a Job</a></li>
+                            <li><a href="/about.html">Pricing</a></li>
+                            <li><a href="/about.html">Recruitment Tools</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="/about.html">About Us</a></li>
+                            <li><a href="/about.html">Blog</a></li>
+                            <li><a href="/about.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 JobFlow. All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="/about.html">Privacy Policy</a>
+                    <a href="/about.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Apply Modal -->
+    <div class="modal" id="apply-modal" data-modal="apply">
+        <div class="modal__content modal__content--large">
+            <div class="modal__header">
+                <h2>Apply for <span id="apply-job-title">this position</span></h2>
+                <button class="modal__close" aria-label="Close modal">&times;</button>
+            </div>
+            
+            <form class="apply-form" id="apply-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="apply-first-name">First Name *</label>
+                        <input type="text" id="apply-first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apply-last-name">Last Name *</label>
+                        <input type="text" id="apply-last-name" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apply-email">Email *</label>
+                    <input type="email" id="apply-email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apply-phone">Phone</label>
+                    <input type="tel" id="apply-phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="apply-location">Location</label>
+                    <input type="text" id="apply-location" placeholder="City, State or Remote">
+                </div>
+                
+                <div class="form-group">
+                    <label for="apply-resume">Resume/CV *</label>
+                    <input type="file" id="apply-resume" accept=".pdf,.doc,.docx" required>
+                    <small>Accepted formats: PDF, DOC, DOCX (Max 5MB)</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apply-cover-letter">Cover Letter</label>
+                    <textarea id="apply-cover-letter" rows="4" placeholder="Tell us why you're interested in this position..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apply-portfolio">Portfolio/Website</label>
+                    <input type="url" id="apply-portfolio" placeholder="https://your-portfolio.com">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn--outline" data-modal-close="apply">Cancel</button>
+                    <button type="submit" class="btn btn--primary">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="signin-modal" data-modal="signin">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h2>Sign In</h2>
+                <button class="modal__close" aria-label="Close modal">&times;</button>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="signin-email">Email</label>
+                    <input type="email" id="signin-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signin-password">Password</label>
+                    <input type="password" id="signin-password" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Sign In</button>
+            </form>
+            <p class="auth-form__footer">
+                Don't have an account? <a href="#" data-modal="signup">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="signup-modal" data-modal="signup">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h2>Create Account</h2>
+                <button class="modal__close" aria-label="Close modal">&times;</button>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Create Account</button>
+            </form>
+            <p class="auth-form__footer">
+                Already have an account? <a href="#" data-modal="signin">Sign in</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/jobs.js"></script>
+</body>
+</html>

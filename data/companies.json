@@ -1,0 +1,112 @@
+[
+  {
+    "id": "company-001",
+    "name": "TechCorp",
+    "description": "A leading technology company focused on building innovative software solutions that transform how businesses operate. We're passionate about creating products that make a difference.",
+    "website": "https://techcorp.com",
+    "size": "201-500 employees",
+    "industry": "Technology",
+    "location": "San Francisco, CA",
+    "founded": "2015",
+    "logo": "TC"
+  },
+  {
+    "id": "company-002",
+    "name": "InnovateLab",
+    "description": "We're a research-driven company that develops cutting-edge AI and machine learning solutions. Our team of experts pushes the boundaries of what's possible with technology.",
+    "website": "https://innovatelab.ai",
+    "size": "51-200 employees",
+    "industry": "Artificial Intelligence",
+    "location": "New York, NY",
+    "founded": "2018",
+    "logo": "IL"
+  },
+  {
+    "id": "company-003",
+    "name": "DataFlow",
+    "description": "DataFlow specializes in big data analytics and business intelligence solutions. We help companies turn their data into actionable insights that drive growth and efficiency.",
+    "website": "https://dataflow.io",
+    "size": "101-250 employees",
+    "industry": "Data & Analytics",
+    "location": "Austin, TX",
+    "founded": "2016",
+    "logo": "DF"
+  },
+  {
+    "id": "company-004",
+    "name": "CloudTech",
+    "description": "CloudTech is a cloud infrastructure and DevOps company that helps businesses modernize their technology stack and accelerate their digital transformation journey.",
+    "website": "https://cloudtech.com",
+    "size": "500+ employees",
+    "industry": "Cloud Computing",
+    "location": "Seattle, WA",
+    "founded": "2012",
+    "logo": "CT"
+  },
+  {
+    "id": "company-005",
+    "name": "FutureSoft",
+    "description": "FutureSoft creates intuitive design systems and user experience solutions. We believe that great design has the power to change the world and make technology accessible to everyone.",
+    "website": "https://futuresoft.design",
+    "size": "11-50 employees",
+    "industry": "Design & UX",
+    "location": "Remote",
+    "founded": "2019",
+    "logo": "FS"
+  },
+  {
+    "id": "company-006",
+    "name": "SmartSys",
+    "description": "SmartSys develops intelligent systems and automation solutions for manufacturing and industrial applications. We're helping companies build the factories of the future.",
+    "website": "https://smartsys.com",
+    "size": "201-500 employees",
+    "industry": "Industrial Automation",
+    "location": "Chicago, IL",
+    "founded": "2014",
+    "logo": "SS"
+  },
+  {
+    "id": "company-007",
+    "name": "DigitalBridge",
+    "description": "DigitalBridge is a consulting firm that helps companies navigate their digital transformation. We provide strategic guidance and technical expertise to ensure successful outcomes.",
+    "website": "https://digitalbridge.consulting",
+    "size": "51-200 employees",
+    "industry": "Consulting",
+    "location": "Remote",
+    "founded": "2017",
+    "logo": "DB"
+  },
+  {
+    "id": "company-008",
+    "name": "CodeCraft",
+    "description": "CodeCraft is a software development agency that builds custom solutions for startups and enterprises. We specialize in web applications, mobile apps, and enterprise software.",
+    "website": "https://codecraft.dev",
+    "size": "11-50 employees",
+    "industry": "Software Development",
+    "location": "Denver, CO",
+    "founded": "2020",
+    "logo": "CC"
+  },
+  {
+    "id": "company-009",
+    "name": "SecureNet",
+    "description": "SecureNet provides cybersecurity solutions and services to protect businesses from evolving threats. Our team of security experts helps companies build robust defense systems.",
+    "website": "https://securenet.com",
+    "size": "101-250 employees",
+    "industry": "Cybersecurity",
+    "location": "Boston, MA",
+    "founded": "2013",
+    "logo": "SN"
+  },
+  {
+    "id": "company-010",
+    "name": "GreenTech",
+    "description": "GreenTech develops sustainable technology solutions that help companies reduce their environmental impact. We're committed to building a greener future through innovation.",
+    "website": "https://greentech.solutions",
+    "size": "51-200 employees",
+    "industry": "Clean Technology",
+    "location": "Portland, OR",
+    "founded": "2019",
+    "logo": "GT"
+  }
+]

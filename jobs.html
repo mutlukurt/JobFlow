@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings - JobFlow</title>
+    <meta name="description" content="Browse thousands of job opportunities. Filter by role, location, experience, and more to find your perfect match.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="/" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="var(--primary)"/>
+                        <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                    </svg>
+                    <span>JobFlow</span>
+                </a>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="/jobs.html" class="nav__link active">Jobs</a></li>
+                    <li><a href="/about.html" class="nav__link">About</a></li>
+                    <li><a href="/post.html" class="nav__link">Post a Job</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-toggle__icon theme-toggle__icon--light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                
+                <div class="auth-buttons">
+                    <button class="btn btn--outline" data-modal="signin">Sign In</button>
+                    <button class="btn btn--primary" data-modal="signup">Create Account</button>
+                </div>
+                
+                <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Job Listings</h1>
+                <p class="page-subtitle">Find your next career opportunity from thousands of available positions</p>
+            </div>
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="search-filters">
+            <div class="container">
+                <form class="search-form" id="jobs-search">
+                    <div class="search-form__group">
+                        <div class="search-form__field">
+                            <svg class="search-form__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="m21 21-4.35-4.35"/>
+                            </svg>
+                            <input type="text" class="search-form__input" placeholder="Job title, keywords, or company" id="search-keywords">
+                        </div>
+                        
+                        <div class="search-form__field">
+                            <svg class="search-form__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <input type="text" class="search-form__input" placeholder="Location or remote" id="search-location">
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary">
+                            Search Jobs
+                        </button>
+                    </div>
+                </form>
+
+                <div class="filters">
+                    <div class="filters__row">
+                        <div class="filter-group">
+                            <label for="filter-role">Role</label>
+                            <select id="filter-role" class="select">
+                                <option value="">All Roles</option>
+                                <option value="frontend">Frontend Developer</option>
+                                <option value="backend">Backend Developer</option>
+                                <option value="fullstack">Full Stack Developer</option>
+                                <option value="devops">DevOps Engineer</option>
+                                <option value="designer">UI/UX Designer</option>
+                                <option value="manager">Product Manager</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="filter-experience">Experience</label>
+                            <select id="filter-experience" class="select">
+                                <option value="">All Levels</option>
+                                <option value="entry">Entry Level</option>
+                                <option value="mid">Mid Level</option>
+                                <option value="senior">Senior Level</option>
+                                <option value="lead">Lead</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="filter-type">Employment Type</label>
+                            <select id="filter-type" class="select">
+                                <option value="">All Types</option>
+                                <option value="fulltime">Full Time</option>
+                                <option value="parttime">Part Time</option>
+                                <option value="contract">Contract</option>
+                                <option value="internship">Internship</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="filter-salary">Salary Range</label>
+                            <select id="filter-salary" class="select">
+                                <option value="">All Salaries</option>
+                                <option value="0-50000">$0 - $50K</option>
+                                <option value="50000-100000">$50K - $100K</option>
+                                <option value="100000-150000">$100K - $150K</option>
+                                <option value="150000+">$150K+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="filters__actions">
+                        <button class="btn btn--outline" id="clear-filters">Clear Filters</button>
+                        <button class="btn btn--subtle" id="save-search">Save Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results">
+            <div class="container">
+                <div class="results__header">
+                    <div class="results__info">
+                        <span id="results-count">0</span> jobs found
+                    </div>
+                    
+                    <div class="results__sort">
+                        <label for="sort-jobs">Sort by:</label>
+                        <select id="sort-jobs" class="select select--small">
+                            <option value="relevance">Relevance</option>
+                            <option value="date">Date Posted</option>
+                            <option value="salary-high">Salary (High to Low)</option>
+                            <option value="salary-low">Salary (Low to High)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="results__content">
+                    <div class="jobs-grid" id="jobs-results">
+                        <!-- Jobs will be loaded here -->
+                    </div>
+
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination will be generated here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="var(--primary)"/>
+                            <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                        </svg>
+                        <span>JobFlow</span>
+                    </div>
+                    <p>Connecting talent with opportunity</p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3>For Job Seekers</h3>
+                        <ul>
+                            <li><a href="/jobs.html">Browse Jobs</a></li>
+                            <li><a href="/about.html">Career Advice</a></li>
+                            <li><a href="#" data-modal="signup">Create Profile</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h3>For Employers</h3>
+                        <ul>
+                            <li><a href="/post.html">Post a Job</a></li>
+                            <li><a href="/about.html">Pricing</a></li>
+                            <li><a href="/about.html">Recruitment Tools</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="/about.html">About Us</a></li>
+                            <li><a href="/about.html">Blog</a></li>
+                            <li><a href="/about.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 JobFlow. All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="/about.html">Privacy Policy</a>
+                    <a href="/about.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="signin-modal" data-modal="signin">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h2>Sign In</h2>
+                <button class="modal__close" aria-label="Close modal">&times;</button>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="signin-email">Email</label>
+                    <input type="email" id="signin-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signin-password">Password</label>
+                    <input type="password" id="signin-password" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Sign In</button>
+            </form>
+            <p class="auth-form__footer">
+                Don't have an account? <a href="#" data-modal="signup">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="signup-modal" data-modal="signup">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h2>Create Account</h2>
+                <button class="modal__close" aria-label="Close modal">&times;</button>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Create Account</button>
+            </form>
+            <p class="auth-form__footer">
+                Already have an account? <a href="#" data-modal="signin">Sign in</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/jobs.js"></script>
+</body>
+</html>
